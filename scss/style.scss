@@ -1,0 +1,74 @@
+/* colour palette */
+$colour1: lightyellow; /* light yellow */
+$colour2: darkgrey; /* dark grey */
+$colour3: white; /* white */
+$colour4: #f7f7f7; /*powder blue */
+
+* {
+  color: $colour2;
+}
+body {
+  font-family: sans-serif, helvetica, arial;
+	font-size: 12px;
+}
+/*body, #wrapper, #track-trace,
+input select option {
+  color: $colour2;
+}*/
+#wrapper {
+  background-color: $colour1;
+  width:420px;
+  margin: 0px auto;
+}
+#content {
+  padding: 10px 0px;
+  width: 100%;
+  text-align: center;
+}
+#track-trace  {
+  margin: 0px auto;
+}
+fieldset {
+  background-color: $colour3;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  text-align: left;
+}
+label {
+  line-height: 28px;
+}
+select {
+  width: 100%;
+  padding: 10px 0px;
+  border: none;
+}
+p {
+  margin-bottom: 15px;
+}
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 20px;
+  border: 1px dashed;
+}
+#track-trace, input[type=text], input[type=email],
+input[type=tel], input[type=submit] {
+  width: 95%;
+}
+input[type=text], input[type=email],
+input[type=tel], input[type=submit] {
+  padding: 10px 0px;
+}
+input[type=text], input[type=email], input[type=tel] {
+  border: none;
+}
+input[type=submit] {
+  border: 2px solid $colour2;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 420px) {
+  #wrapper {
+    width:100%
+  }
+}

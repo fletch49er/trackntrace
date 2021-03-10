@@ -1,0 +1,73 @@
+/* colour palette */
+/* light yellow */
+/* dark grey */
+/* white */
+/*powder blue */
+* {
+  color: darkgrey; }
+
+body {
+  font-family: sans-serif, helvetica, arial;
+  font-size: 12px; }
+
+/*body, #wrapper, #track-trace,
+input select option {
+  color: $colour2;
+}*/
+#wrapper {
+  background-color: lightyellow;
+  width: 420px;
+  margin: 0px auto; }
+
+#content {
+  padding: 10px 0px;
+  width: 100%;
+  text-align: center; }
+
+#track-trace {
+  margin: 0px auto; }
+
+fieldset {
+  background-color: white;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  text-align: left; }
+
+label {
+  line-height: 28px; }
+
+select {
+  width: 100%;
+  padding: 10px 0px;
+  border: none; }
+
+p {
+  margin-bottom: 15px; }
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 20px;
+  border: 1px dashed; }
+
+#track-trace, input[type=text], input[type=email],
+input[type=tel], input[type=submit] {
+  width: 95%; }
+
+input[type=text], input[type=email],
+input[type=tel], input[type=submit] {
+  padding: 10px 0px; }
+
+input[type=text], input[type=email], input[type=tel] {
+  border: none; }
+
+input[type=submit] {
+  border: 2px solid darkgrey;
+  border-radius: 10px; }
+
+@media only screen and (max-width: 420px) {
+  #wrapper {
+    width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */
