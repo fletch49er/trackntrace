@@ -2,18 +2,21 @@
 /* light yellow */
 /* dark grey */
 /* white */
-/*powder blue */
+/* powder blue */
+/* green */
+/* yellow */
+/* light grey */
 * {
-  color: darkgrey; }
+  color: #555; }
 
 body {
   font-family: sans-serif, helvetica, arial;
   font-size: 12px; }
 
-/*body, #wrapper, #track-trace,
+body, #wrapper, #track-trace,
 input select option {
-  color: $colour2;
-}*/
+  color: #555; }
+
 #wrapper {
   background-color: lightyellow;
   width: 420px;
@@ -36,6 +39,10 @@ fieldset {
 
 label {
   line-height: 28px; }
+
+input, select {
+  font-size: 16px;
+  font-weight: bold; }
 
 select {
   width: 100%;
@@ -63,8 +70,38 @@ input[type=text], input[type=email], input[type=tel] {
   border: none; }
 
 input[type=submit] {
-  border: 2px solid darkgrey;
-  border-radius: 10px; }
+  border: 2px solid green;
+  border-radius: 10px;
+  color: green;
+  cursor: pointer; }
+
+#switch_form {
+  cursor: pointer;
+  font-weight: bold;
+  color: green; }
+
+#notice {
+  margin: 10px;
+  border: 10px solid green;
+  border-radius: 30px;
+  background-color: yellow;
+  font-weight: bold;
+  font-size: 20px; }
+
+#notice h2, #notice p {
+  color: green; }
+
+#footer, #dbmNotice {
+  text-align: center; }
+
+#dbmNotice {
+  margin-top: 5px; }
+
+a:link, a:visited {
+  color: green; }
+
+a:hover {
+  color: #555; }
 
 @media only screen and (max-width: 420px) {
   #wrapper {
