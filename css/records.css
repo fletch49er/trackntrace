@@ -1,0 +1,33 @@
+/* colour palette */
+/* light yellow */
+/* dark grey */
+/* white */
+/* powder blue */
+/* green */
+/* yellow */
+/* light grey */
+#wrapper {
+  width: 100%;
+  margin: 0px 3px; }
+
+#content {
+  width: 95%;
+  margin: 0px auto; }
+
+table {
+  margin: 20px 0px; }
+
+table tr:nth-child(odd) {
+  background-color: #eee; }
+
+table tr:nth-child(even) {
+  background-color: white; }
+
+th, td {
+  padding: 5px 2px; }
+
+@media only screen and (max-width: 960px) {
+  #content {
+    width: 100%; } }
+
+/*# sourceMappingURL=records.css.map */

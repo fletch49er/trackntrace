@@ -47,5 +47,5 @@ function dbmNotice($designed, $hosted, $maintained) {
 }
 ?>
 <div id="dbmNotice">
-	website <?php echo dbmNotice($design, $host, $maintain); ?>by <a href="http://www.designsbymark.co.uk" title="www.designsbymark.co.uk">designs by mark</a>
+	<?php echo dbmNotice($design, $host, $maintain); ?>by <a href="http://www.designsbymark.co.uk" title="www.designsbymark.co.uk">designs by mark</a>
 </div><!-- end #dbmNotice -->

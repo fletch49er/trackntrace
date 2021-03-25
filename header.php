@@ -29,13 +29,17 @@
 	<!-- CDN powered icon kit fontawesome.com -->
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-	<!-- favicon --><!--
-	<link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon' />
--->
+	<!-- external javascript files -->
+	<script src="js/functions.js"></script>
+	<!-- favicon -->
+	<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+
 	<!-- stylesheets -->
 	<link rel="stylesheet" type="text/css" href="css/style.css"  />
+	<link rel="stylesheet" type="text/css" href="css/records.css"  />
+<!--
 	<link rel="stylesheet" type="text/css" href="css/policies.css"  />
-	<link rel="stylesheet" type="text/css" href="css/dbmNotice.css"  />
+ -->
 </head>
 <body>
 	<div id="header" class="clearfix">
