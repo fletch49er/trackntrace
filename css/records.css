@@ -6,16 +6,17 @@
 /* green */
 /* yellow */
 /* light grey */
-#wrapper {
+#wrapperRecords {
   width: 100%;
   margin: 0px 3px; }
 
-#content {
+#contentRecords {
   width: 95%;
-  margin: 0px auto; }
+  margin: 0 auto; }
 
 table {
-  margin: 20px 0px; }
+  margin: 20px auto;
+  width: 100%; }
 
 table tr:nth-child(odd) {
   background-color: #eee; }
@@ -27,7 +28,7 @@ th, td {
   padding: 5px 2px; }
 
 @media only screen and (max-width: 960px) {
-  #content {
+  #contentRecords {
     width: 100%; } }
 
 /*# sourceMappingURL=records.css.map */

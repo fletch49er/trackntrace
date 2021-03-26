@@ -11,9 +11,24 @@ if (isset($_COOKIE['trackData'])) {
 		$form_values[$name][3] = $value;
 		$form_values[$name][4] = 'off';
 	}
-	$form_email = array_slice($form_values, 2, 2);
-	$form_address = array_slice($form_values, 4, 4);
-	//print_r($form_values);
+}
+// create slices of form values array
+$form_email = array_slice($form_values, 2, 2);
+$form_address = array_slice($form_values, 4, 4);
+
+// set cookies
+if(isset($_POST)) {
+	$postArray = $_POST;
+	$removeSubmit = array_pop($postArray);
+	if(isset($_POST['remember']) && $_POST['remember'] == 1) {
+		foreach($postArray as $name => $value) {
+			setcookie('trackData['.$name.']', htmlentities(''.$value.''), $arr_cookie_options1);
+		}
+	} else {
+		foreach($postArray as $name => $value) {
+			setcookie('trackData['.$name.']', htmlentities(''.$value.''), $arr_cookie_options2);
+		}
+	}
 }
 
 // open comms to database
@@ -55,14 +70,14 @@ include_once 'header.php';
 		</div><!-- end #details -->
 <?php
 $select_lists = [
-  'numbers' => 'How many guests are with you?',
-  'duration' => 'How long do you plan to stay?'
+  'track_numbers' => ['numbers', 'How many guests are with you?'],
+  'track_duration' => ['duration', 'How long do you plan to stay?']
 ];
 foreach($select_lists as $name => $value) :
 ?>
     <fieldset>
-      <label for="<?php echo $name; ?>"><?php echo $value; ?></label><br />
-      <select id="<?php echo $name; ?>" name="<?php echo $name; ?>">
+      <label for="<?php echo $value[0]; ?>"><?php echo $value[1]; ?></label><br />
+      <select id="<?php echo $value[0]; ?>" name="<?php echo $value[0]; ?>">
       	<option value="" disabled selected>Select an option</option>
 <?php
 $sql = "SELECT `id`, `text` FROM `".$name."`";
@@ -78,32 +93,17 @@ selectList($sql);
     </form><!-- end #track-trace -->
 <?php
 else :
-	// set cookies
-	$postArray = $_POST;
-	$removeSubmit = array_pop($postArray);
-	if(isset($_POST['remember']) && $_POST['remember'] == 1) {
-		foreach($postArray as $name => $value) {
-			setcookie('trackData['.$name.']', htmlentities(''.$value.''), EXPIRY);
-		}
-	} else {
-		foreach($postArray as $name => $value) {
-			setcookie('trackData['.$name.']', htmlentities(''.$value.''));
-		}
-	}
-
-	if (isset($_COOKIE['track_data'])) :
-
 	// update database
 	$sql = updateRecords($postArray);
-	if(!$pdo->query($sql)) {
-		echo "ERROR: Could not execute $sql. " . print_r($pdo->errorInfo());
-	}
+	if($pdo->query($sql)) :
 ?>
 		<div id="notice">
 			<h2>SUCCESS!</h2>
 			<p>Thank you for Checking In</p>
 		</div><!-- end #notice -->
 <?php
+	else :
+		echo "ERROR: Could not execute $sql. " . print_r($pdo->errorInfo());
 	endif;
 endif;
 ?>

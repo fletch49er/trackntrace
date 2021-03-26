@@ -14,14 +14,14 @@ try {
 
 
 
-$sql = "SELECT v.first, v.last, v.email, v.phone, v.address1, v.address2, v.townCity, v.postcode, v.u13, v.timestamp, n.text AS numbers, d.text AS duration FROM visitors AS v INNER JOIN numbers AS n ON v.numbers = n.id INNER JOIN duration AS d ON v.duration = d.id";
+$sql = "SELECT v.first, v.last, v.email, v.phone, v.address1, v.address2, v.townCity, v.postcode, v.u13, v.timestamp, n.text AS numbers, d.text AS duration FROM track_visitors AS v INNER JOIN track_numbers AS n ON v.numbers = n.id INNER JOIN track_duration AS d ON v.duration = d.id ORDER BY v.timestamp ASC";
 
 //include external header file
 include_once 'header.php';
 ?>
 
-<div id="wrapper">
-  <div id="content">
+<div id="wrapperRecords">
+  <div id="contentRecords">
 		<h1>COVID-19</h1>
     <h2> Track &amp; Trace Records</h2>
     <h1><?php echo COMPANY; ?></h1>
@@ -68,7 +68,7 @@ else :
 endif;
 ?>
 		</table>
-
+</div><!-- end #contentRecords -->
 <?php
 //include external footer file
 include_once 'footer.php';
@@ -76,4 +76,4 @@ include_once 'footer.php';
 //close db comms
 $pdo = null;
 ?>
-</div><!-- end #wrapper -->
+</div><!-- end #wrapperRecords -->

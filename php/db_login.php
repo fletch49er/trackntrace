@@ -16,5 +16,5 @@
 define('AUTH_HOST', 'localhost');
 define('AUTH_USER', 'designs4_user');
 define('AUTH_PWD', 'th1nL1zzy');
-define('AUTH_DB', 'track_n_trace');
+define('AUTH_DB', 'designs4_dbm');
 ?>

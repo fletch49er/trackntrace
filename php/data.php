@@ -28,10 +28,24 @@ define ('TELEPHONE', '');
 define ('EMAIL', '');
 define ('VATNO', '');
 
-// cookie constants
-define ('EXPIRY', time()+60*60*24*21); //21 days
-define ('PATH', '\/tracktrace\/');
-define ('SECURE', true);
+// cookie arrays
+$arr_cookie_options1 = [
+  'expires' => time() + 60*60*24*21,
+  'path' => '\/tracktrace\/',
+  'domain' => '.designsbymark.co.uk',
+  'secure' => false,
+  'httponly' => true,
+  'samesite' => 'None'
+];
+
+$arr_cookie_options2 = [
+  'expires' => time(),
+  'path' => '/tracktrace/',
+  'domain' => '.designsbymark.co.uk',
+  'secure' => false,
+  'httponly' => true,
+  'samesite' => 'None'
+];
 
 // initial form values
 $form_values = [

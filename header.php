@@ -27,7 +27,7 @@
 	<title>Track &amp; Trace</title>
 
 	<!-- CDN powered icon kit fontawesome.com -->
-	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="https://kit.fontawesome.com/f2c0311557.js" crossorigin="anonymous"></script>
 
 	<!-- external javascript files -->
 	<script src="js/functions.js"></script>

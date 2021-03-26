@@ -87,7 +87,7 @@ function updateRecords($record) {
 		}
 		$count++;
 	}
-	$sql = "INSERT INTO visitors ($nameStr) VALUES ($valueStr)";
+	$sql = "INSERT INTO track_visitors ($nameStr) VALUES ($valueStr)";
 	return $sql;
 }
 
