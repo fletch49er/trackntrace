@@ -16,10 +16,11 @@
 */
 ?>
 <div id="footer" class="clearfix">
-	<div id=""></div>
 	<div id="copyright"><?php copyright(COMPANY, 2020); ?></div>
 </div><!-- end #footer -->
 
 <?php include_once('templates/dbmNotice.php'); ?>
+
+</div><!-- end #wrapper -->
 </body>
 </html>

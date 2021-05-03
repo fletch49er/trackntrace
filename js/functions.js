@@ -25,10 +25,10 @@ function change_form(dataArray, offset, length) {
 		formBlock += '<fieldset>\n';
 		formBlock += '<label for="'+ name[x] +'">'+ dataArray[''+name[x]+''][0] +':</label><br />\n';
 		formBlock += '<input autocomplete="'+ dataArray[''+name[x]+''][4] +'" id="'+ name[x] +'" type="'+ dataArray[''+name[x]+''][1] +'" name="'+ name[x] +'" value="'+ dataArray[''+name[x]+''][3] +'"';
-		if ( name[x] != 'postcode') {
-			formBlock += ' placeholder="'+ dataArray[''+name[x]+''][2] +'" />\n';
-		} else {
+		if (dataArray.hasOwnProperty('email') || (name[x] == 'postcode')) {
 			formBlock += ' placeholder="'+ dataArray[''+name[x]+''][2] +'" required />\n';
+		} else {
+			formBlock += ' placeholder="'+ dataArray[''+name[x]+''][2] +'" />\n';
 		}
 		formBlock += '</fieldset>\n';
 	}

@@ -56,25 +56,24 @@ function selectList($sql) {
  }
 }
 
- /*
-  * ===================================================================
-  * Function:	updateRecords()
-  * Purpose:	function to create INPUT sql string
-  * Author:		Mark Fletcher
-  * Date:			25.03.2021
-  *
-  * Input:
-  * 	$record from forn entries
-  *
-  * Output:
-  * 	$sql string
-  *
-  * Notes:
-  *
-  * ==================================================================
+/*
+ * ===================================================================
+ * Function:	updateRecords()
+ * Purpose:		function to create INPUT sql string
+ * Author:		Mark Fletcher
+ * Date:			25.03.2021
+ *
+ * Input:
+ * 	$record from forn entries
+ *
+ * Output:
+ * 	$sql string
+ *
+ * Notes:
+ *
+ * ==================================================================
 */
 function updateRecords($record) {
-	array_pop($record);
 	$nameStr = "";
 	$valueStr = "";
 	$count = 1;
@@ -88,6 +87,7 @@ function updateRecords($record) {
 		$count++;
 	}
 	$sql = "INSERT INTO track_visitors ($nameStr) VALUES ($valueStr)";
+	echo $sql;
 	return $sql;
 }
 

@@ -30,11 +30,10 @@ input select option {
 #track-trace {
   margin: 0px auto; }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p {
   text-align: center; }
 
 fieldset {
-  background-color: white;
   margin-bottom: 15px;
   border: none;
   border-radius: 10px;
@@ -53,7 +52,7 @@ select {
   border: none; }
 
 p {
-  margin-bottom: 15px; }
+  margin: 0 10px 15px 10px; }
 
 hr {
   margin-top: 15px;
@@ -83,7 +82,7 @@ input[type=submit] {
   font-weight: bold;
   color: green; }
 
-#notice {
+.notice {
   margin: 10px;
   border: 10px solid green;
   border-radius: 30px;
@@ -91,7 +90,7 @@ input[type=submit] {
   font-weight: bold;
   font-size: 20px; }
 
-#notice h2, #notice p {
+h2.notice, p.notice {
   color: green; }
 
 #footer, #dbmNotice {
